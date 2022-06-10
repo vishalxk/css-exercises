@@ -3,7 +3,20 @@
   color: hsl(0, 100%, 50%);
 }
 
-.small-para {
+/*
+  The rule before was: 
+  
+  .small-para {
+    font-size: 14px;
+  }
+
+  Because the specificity of .para and .small-para are the same, 
+  the former rule was being picked up as it comes later in the file.
+  For this reason, I used the chaining method to increase the specificity
+  of the rule targeting .small-para.
+*/
+
+.para.small-para {
   font-size: 14px;
 }
 
@@ -11,11 +24,26 @@
   font-size: 22px;
 }
 
-.confirm {
+/*
+  The rule before was:
+
+  .confirm {
+    background: green;
+    color: white;
+    font-weight: bold;
+  }
+
+  Because the specificity of .confirm and .button are the same,
+  some of the latter rule's declarations were overriding the former rule's
+  declarations. As such, I used the ID selector to increase the specificity 
+  of the rule targetting the confirm button.
+*/
+
+#confirm-button {
   background: green;
   color: white;
   font-weight: bold;
-} 
+}
 
 .button {
   background-color: rgb(255, 255, 255);
@@ -23,7 +51,20 @@
   font-size: 20px;
 }
 
-.child {
+/*
+  The rule before was:
+
+  .child {
+    color: red;
+    font-size: 14px;
+  }
+
+  Because child elements inherit style declarations of parent elements,
+  .child's rule declarations were being overidden. By adding .text before 
+  .child, I used the descendant combinator method to target .child's text.
+*/
+
+.text .child {
   color: red;
   font-size: 14px;
 }
