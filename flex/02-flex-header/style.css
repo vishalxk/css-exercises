@@ -1,6 +1,19 @@
 .header  {
   font-family: monospace;
   background: papayawhip;
+
+  /* 
+    Make .header a flex container, then use justify content (affects
+    main axis) to align the flex items to start, center, and end with 
+    space-between, and align-items (affects cross axis) to align flex
+    items to the centre vertically. Finally, add padding to achieve
+    desired result.
+  */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
 
 .logo {
@@ -14,6 +27,17 @@
 ul {
   /* this removes the dots on the list items*/
   list-style-type: none;
+
+  /* 
+    Make the unordered list itself a flex container for the list items. Then,
+    add gap between the flex items (list items) and remove the default margin
+    and padding that is added to items of an unordered list.
+  */
+
+  display: flex;
+  gap: 10px;
+  padding: 0px;
+  margin: 0px;
 }
 
 a {
