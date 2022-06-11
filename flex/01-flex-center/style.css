@@ -4,10 +4,11 @@
   width: 400px;
   height: 300px;
 
-  /* Make .container a flex container, then use justify-content 
-     (affects main axis) to align the flex item to the centre 
-     horizontally and align-items (affects cross-axis) to align 
-     the flex item to the centre vertically.   
+  /* 
+    Make .container a flex container, then use justify-content 
+    (affects main axis) to align the flex item to the centre 
+    horizontally and align-items (affects cross-axis) to align 
+    the flex item to the centre vertically.   
   */
   
   display: flex;
