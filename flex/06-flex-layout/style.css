@@ -1,10 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/* 
+  Make body a flex container with flex-direction column so .header, .content,
+  and .footer are stacked vertically. Then, position the left and right links
+  in .header and .footer correctly and remove any text and underline 
+  decoration. Next, position .content in the center. Finally, add padding
+  and margins as needed to meet exercise requirements.
+*/
+
 body {
   height: 100vh;
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -16,6 +26,10 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 16px;
+  padding-left: 16px;
 }
 
 input {
@@ -24,4 +38,39 @@ input {
   padding: 8px 24px;
   width: 400px;
   margin-bottom: 16px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #666;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #eee;
 }
