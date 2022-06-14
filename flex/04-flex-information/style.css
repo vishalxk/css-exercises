@@ -7,9 +7,39 @@ img {
   height: 100px;
 }
 
+/*  
+  First, align the title to the center and create a flex container around
+  all plants. Align these items to the center and add the required gap of
+  52px between each flex item. Finally, create flex containers around
+  the images and information for each plant, align them with the center of
+  the cross axis, and add a maximum width of 200px as required.
+*/
+
 .title {
   font-size: 36px;
   font-weight: 900;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.plants {
+  display: flex;
+  justify-content: center;
+  gap: 52px;
+}
+
+.barberry, 
+.chili,
+.pepper,
+.saffron {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px;
+}
+
+.text {
+  text-align: center;
 }
 
 /* do not edit this footer */
