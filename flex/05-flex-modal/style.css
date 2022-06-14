@@ -20,6 +20,29 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  display: flex;
+  padding: 16px;
+  gap: 16px
+}
+
+/* 
+  Make modal a flex container for two flex items: 1) .icon and 2) .header,
+  .close-button, .text, and the continue and cancel buttons. Next, make .header
+  itself a flex container for the header and .close-button. This should give
+  us the basic arrangement we require. All that is needed from here is to set
+  the padding, gap, and margin as necessary between the elements.
+*/
+
+.header {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  margin-bottom: 16px;
 }
 
 .icon {
@@ -33,6 +56,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .close-button {
@@ -46,6 +70,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 button {
